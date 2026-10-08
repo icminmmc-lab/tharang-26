@@ -1,0 +1,178 @@
+*{box-sizing:border-box}
+:root{
+  --navy:#17365D;
+  --navy2:#244D7D;
+  --gold:#C9A227;
+  --cream:#FBF7EE;
+  --bg:#F3F5F8;
+  --white:#fff;
+  --text:#182233;
+  --muted:#718096;
+  --line:#E1E6ED;
+  --red:#7A211E;
+}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,Arial,Helvetica,sans-serif;
+}
+.site{width:min(100%,820px);margin:0 auto;background:var(--white);min-height:100vh}
+.top-header{background:var(--white)}
+.brand-row{
+  display:grid;
+  grid-template-columns:78px 1fr 125px;
+  align-items:center;
+  gap:14px;
+  padding:16px 20px 13px;
+  border-bottom:1px solid var(--line);
+}
+.college-logo{width:72px;height:72px;object-fit:contain}
+.tharang-logo{width:120px;height:82px;object-fit:contain;justify-self:end}
+.college-name{font-weight:900;font-size:20px;letter-spacing:.025em;color:var(--navy)}
+.college-sub{font-size:11px;font-weight:800;letter-spacing:.08em;margin-top:3px}
+.college-place{font-size:11px;color:var(--muted);font-weight:700;margin-top:3px}
+.event-banner{
+  margin:0 14px;
+  border-radius:0 0 22px 22px;
+  padding:25px 20px 28px;
+  text-align:center;
+  color:#fff;
+  background:
+    radial-gradient(circle at 18% 30%,rgba(201,162,39,.24),transparent 26%),
+    radial-gradient(circle at 83% 65%,rgba(255,255,255,.08),transparent 30%),
+    linear-gradient(135deg,var(--navy),var(--navy2));
+}
+.banner-kicker{font-size:10px;letter-spacing:.17em;font-weight:800;opacity:.82}
+.event-banner h1{font-family:Georgia,serif;font-size:34px;letter-spacing:.04em;margin:7px 0 2px}
+.event-banner p{font-size:13px;margin:0 0 15px;opacity:.88}
+.date-badge{
+  display:inline-block;
+  border:1px solid rgba(255,255,255,.38);
+  background:rgba(255,255,255,.09);
+  padding:7px 13px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+.content{padding:22px 20px 8px}
+.search-box{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  padding:0 14px;
+  min-height:52px;
+  box-shadow:0 5px 18px rgba(20,40,70,.05);
+}
+.search-icon{font-size:25px;color:var(--muted);line-height:1}
+#searchInput{
+  border:0;
+  outline:0;
+  width:100%;
+  font-size:16px;
+  color:var(--text);
+  background:transparent;
+}
+.tabs{display:flex;gap:8px;overflow:auto;padding:15px 0 10px}
+.tab{
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--text);
+  border-radius:999px;
+  padding:10px 16px;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:800;
+}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:10px 0 14px}
+.section-label{font-size:10px;letter-spacing:.13em;color:var(--gold);font-weight:900}
+.section-heading h2{margin:3px 0 0;font-family:Georgia,serif;font-size:24px}
+.event-count{font-size:12px;color:var(--muted);white-space:nowrap}
+.event-card{
+  position:relative;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:11px;
+  cursor:pointer;
+  transition:.16s ease;
+  overflow:hidden;
+}
+.event-card::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:4px;
+  background:var(--gold);
+}
+.event-card:hover{border-color:#aeb9c8;transform:translateY(-1px);box-shadow:0 7px 20px rgba(20,40,70,.07)}
+.event-code{font-size:10px;color:var(--gold);font-weight:900;letter-spacing:.1em}
+.event-name{font-size:19px;font-weight:850;margin:5px 0 13px;padding-right:5px}
+.event-meta{display:flex;flex-wrap:wrap;gap:7px}
+.pill{background:#F3F5F8;border-radius:8px;padding:7px 9px;font-size:12px;font-weight:750}
+.empty{text-align:center;padding:35px 10px;color:var(--muted);border:1px solid var(--line);border-radius:16px}
+.hidden{display:none!important}
+.detail-view{padding-top:2px}
+.back-button{border:0;background:transparent;color:var(--navy);font-weight:850;font-size:14px;cursor:pointer;padding:5px 0 14px}
+.detail-card{
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 9px 28px rgba(20,40,70,.08);
+}
+.detail-top{
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
+  color:#fff;
+  padding:22px;
+}
+.detail-code{font-size:10px;letter-spacing:.11em;font-weight:900;color:#E7D08A}
+.detail-name{font-family:Georgia,serif;font-size:28px;font-weight:700;margin:6px 0 0}
+.detail-body{padding:4px 20px 8px}
+.info-row{display:flex;gap:15px;align-items:center;padding:17px 0;border-bottom:1px solid var(--line)}
+.info-row:last-child{border-bottom:0}
+.info-icon{width:40px;height:40px;border-radius:11px;background:#F5F1E5;display:grid;place-items:center;font-size:19px;flex:none}
+.info-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:850}
+.info-value{font-size:17px;font-weight:800;margin-top:3px}
+.notice{
+  margin:15px 0 6px;
+  background:#F7F4EA;
+  border:1px solid #E8DDB9;
+  border-radius:12px;
+  padding:12px;
+  color:#654F16;
+  font-size:12px;
+  font-weight:700;
+}
+footer{
+  margin:28px 20px 0;
+  padding:17px 0 22px;
+  border-top:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--muted);
+  font-size:10px;
+}
+.footer-logo{width:35px;height:35px;object-fit:contain}
+.footer-tharang{width:70px;height:45px;object-fit:contain;margin-left:auto}
+footer strong{display:block;color:var(--navy);font-size:10px}
+footer span{display:block;margin-top:2px}
+@media(max-width:560px){
+  .brand-row{grid-template-columns:55px 1fr 82px;gap:9px;padding:12px 13px}
+  .college-logo{width:52px;height:58px}
+  .tharang-logo{width:80px;height:58px}
+  .college-name{font-size:15px}
+  .college-sub{font-size:8px}
+  .college-place{font-size:9px}
+  .event-banner{margin:0 9px;padding:22px 14px 24px}
+  .event-banner h1{font-size:29px}
+  .content{padding:18px 13px 5px}
+}

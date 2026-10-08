@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17365D">
+  <title>THARANG'26 | Event Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="site">
+    <header class="top-header">
+      <div class="brand-row">
+        <img class="college-logo" src="college-logo.png" alt="Mary Matha College logo">
+        <div class="college-text">
+          <div class="college-name">MARY MATHA</div>
+          <div class="college-sub">COLLEGE OF ARTS &amp; SCIENCE</div>
+          <div class="college-place">PERIYAKULAM</div>
+        </div>
+        <img class="tharang-logo" src="tharang-logo.png" alt="THARANG'26 logo">
+      </div>
+
+      <div class="event-banner">
+        <div class="banner-kicker">INTER-COLLEGE CULTURAL MEET</div>
+        <h1>EVENT FINDER</h1>
+        <p>Find your event • venue • time • block</p>
+        <div class="date-badge">09 OCTOBER 2026</div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="search"
+          placeholder="Search event name or code..."
+          aria-label="Search event name or code">
+      </div>
+
+      <nav class="tabs" aria-label="Event categories">
+        <button class="tab active" data-filter="All" type="button">All</button>
+        <button class="tab" data-filter="Group" type="button">Group</button>
+        <button class="tab" data-filter="Individual" type="button">Individual</button>
+        <button class="tab" data-filter="Online" type="button">Online</button>
+      </nav>
+
+      <div class="section-heading">
+        <div>
+          <span class="section-label">THARANG'26</span>
+          <h2>Today's Events</h2>
+        </div>
+        <span id="eventCount" class="event-count"></span>
+      </div>
+
+      <div id="eventList"></div>
+
+      <section id="detailView" class="detail-view hidden">
+        <button id="backButton" class="back-button" type="button">← All events</button>
+        <div id="detailCard"></div>
+      </section>
+    </section>
+
+    <footer>
+      <img src="college-logo.png" alt="" class="footer-logo">
+      <div>
+        <strong>MARY MATHA COLLEGE OF ARTS &amp; SCIENCE</strong>
+        <span>Periyakulam</span>
+      </div>
+      <img src="tharang-logo.png" alt="" class="footer-tharang">
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
